@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./news-categories/news-categories.module').then(mod => mod.NewsCategoriesModule),
   },
   {
-    path: 'articles',
+    path: 'articles/:category',
     loadChildren: () => import('./articles-in-category/articles-in-category.module').then(mod => mod.ArticlesInCategoryModule)
   },
   {
