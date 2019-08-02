@@ -39,6 +39,7 @@
     "codelyzer": "^5.0.0",
     "http-server": "^0.11.1",
     "jasmine-core": "~3.4.0",
+    "firebase-tools": "^7.2.2",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
     "karma-chrome-launcher": "~2.2.0",

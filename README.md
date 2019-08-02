@@ -12,4 +12,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Production server
 
-After `ng build --prod` you can start http-server `http-server -c-1 .`
+After `ng build --prod` you can start http-server, go to `cd dist/breaking-news` and `http-server -c-1 .`
+
+
+## Demo 
+
+https://breaking-news-efbe1.firebaseapp.com/
