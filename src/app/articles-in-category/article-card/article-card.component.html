@@ -1,0 +1,12 @@
+<a class="wrapper">
+  <div
+    *ngIf="urlToImage"
+    class="image"
+    [style.backgroundImage]="'url(' + urlToImage + ')'"></div>
+  <div
+    *ngIf="!urlToImage"
+    class="image"
+    [style.backgroundImage]="'url(../../assets/images/image-not-found.jpg)'"></div>
+  <h2 class="title">{{title}}</h2>
+  <p class="description">{{description}}</p>
+</a>

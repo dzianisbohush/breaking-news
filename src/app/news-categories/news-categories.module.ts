@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NewsCategoriesRoutingModule } from './news-categories-routing.module';
-import { NewsCategoriesComponent } from './news-categories/news-categories.component';
+import { NewsCategoriesComponent } from './news-categories.component';
 
 
 @NgModule({

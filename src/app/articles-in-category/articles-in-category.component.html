@@ -1,0 +1,11 @@
+  <div *ngIf="articles && articles.length" class="main-wrapper">
+    <app-article-card
+      *ngFor="let article of articles"
+      [title]="article.title"
+      [description]="article.description"
+      [urlToImage]="article.urlToImage"></app-article-card>
+  </div>
+  <div *ngIf="!articles || !articles.length">
+    <span>LOADING...</span>
+  </div>
+
