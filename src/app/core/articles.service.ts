@@ -19,7 +19,6 @@ export class ArticlesService {
   constructor(private http: HttpClient) { }
 
   // @todo page pagination
-  // @todo resolve cashing
   // @todo error handling
   getArticles(category: string): Observable<IArticles> {
     return this.http.get<IArticles>(this.baseUrl + category);
