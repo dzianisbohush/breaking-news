@@ -7,16 +7,12 @@ import {tap} from 'rxjs/operators';
 import {uuid} from './uuid';
 
 import {IArticle, IArticles} from '../shared/interfaces';
+import {Constants} from '../constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticlesService {
-
-  // @todo resolve const save
-  // @todo env file
-  baseUrl = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=7965b195644f42b2a609f228d5580775&category=';
-
   // tslint:disable-next-line:variable-name
   private readonly _articles = new BehaviorSubject<IArticle[]>([]);
 
@@ -35,7 +31,7 @@ export class ArticlesService {
   // @todo page pagination
   // @todo error handling
   getArticles(category: string): Observable<IArticles> {
-    return this.http.get<IArticles>(this.baseUrl + category).pipe(
+    return this.http.get<IArticles>(Constants.GET_ARTICLES_URL + category).pipe(
       tap((response) => {
         const {articles} = response;
         this.articles = articles.map((article) => ({...article, id: uuid()}));
