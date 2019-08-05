@@ -1,12 +1,14 @@
-  <div *ngIf="articles && articles.length" class="main-wrapper">
+  <div class="main-wrapper">
+    <div *ngIf="articleService.loading">
+      <mat-spinner></mat-spinner>
+      <h2>Loading...</h2>
+    </div>
+
     <app-article-card
       *ngFor="let article of articles"
       [title]="article.title"
       [id]="article.id"
       [description]="article.description"
       [urlToImage]="article.urlToImage"></app-article-card>
-  </div>
-  <div *ngIf="!articles || !articles.length">
-    <span>LOADING...</span>
   </div>
 

@@ -18,6 +18,8 @@ export class ArticlesService {
 
   readonly articles$ = this._articles.asObservable();
 
+  loading = false;
+
   constructor(private http: HttpClient) { }
 
   get articles(): IArticle[] {
@@ -28,13 +30,14 @@ export class ArticlesService {
     this._articles.next(val);
   }
 
-  // @todo page pagination
-  // @todo error handling
   getArticles(category: string): Observable<IArticles> {
+    this.loading = true;
+
     return this.http.get<IArticles>(Constants.GET_ARTICLES_URL + category).pipe(
       tap((response) => {
         const {articles} = response;
         this.articles = articles.map((article) => ({...article, id: uuid()}));
+        this.loading = false;
       })
     );
   }
