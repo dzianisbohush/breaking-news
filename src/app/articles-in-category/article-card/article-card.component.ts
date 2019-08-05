@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./article-card.component.scss']
 })
 export class ArticleCardComponent implements OnInit {
+  @Input() id: string;
   @Input() title: string;
   @Input() description: string;
   @Input() urlToImage: string;

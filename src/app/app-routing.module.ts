@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./articles-in-category/articles-in-category.module').then(mod => mod.ArticlesInCategoryModule)
   },
   {
-    path: 'article',
+    path: 'article/:id',
     loadChildren: () => import('./article/article.module').then(mod => mod.ArticleModule)
   },
   { path: '',   redirectTo: '/categories', pathMatch: 'full' },

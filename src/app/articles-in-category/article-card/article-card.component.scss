@@ -12,6 +12,12 @@ $border-radius : 10px;
   box-shadow: 3px 3px 10px -2px rgba(254,231,21,0.75);
   text-decoration: none;
   border-radius: $border-radius;
+  color: #FEE715FF;
+  transition: color linear .3s;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .image {

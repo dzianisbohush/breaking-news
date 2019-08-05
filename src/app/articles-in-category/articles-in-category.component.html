@@ -2,6 +2,7 @@
     <app-article-card
       *ngFor="let article of articles"
       [title]="article.title"
+      [id]="article.id"
       [description]="article.description"
       [urlToImage]="article.urlToImage"></app-article-card>
   </div>

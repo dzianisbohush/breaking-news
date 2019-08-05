@@ -1,4 +1,5 @@
-interface IArticle {
+export interface IArticle {
+  id: string;
   author: string;
   content: string;
   description: string;
