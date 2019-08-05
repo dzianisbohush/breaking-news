@@ -1,14 +1,18 @@
-  <div class="main-wrapper">
-    <div *ngIf="articleService.loading">
+<div class="main-wrapper">
+  <ng-template [ngIf]="articleService.loading" [ngIfElse]="articlesItems">
+    <div>
       <mat-spinner></mat-spinner>
       <h2>Loading...</h2>
     </div>
+  </ng-template>
 
+  <ng-template #articlesItems>
     <app-article-card
       *ngFor="let article of articles"
       [title]="article.title"
       [id]="article.id"
       [description]="article.description"
       [urlToImage]="article.urlToImage"></app-article-card>
-  </div>
+  </ng-template>
+</div>
 
