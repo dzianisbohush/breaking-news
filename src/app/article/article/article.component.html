@@ -1,1 +1,12 @@
-<div *ngIf="article">{{article.id}}</div>
+<div *ngIf="article" class="wrapper">
+  <h1>{{article.title}}</h1>
+  <div>
+    <p>Source: {{article.source.name}}</p>
+    <span>{{article.publishedAt}}</span>
+  </div>
+  <div
+    *ngIf="article.urlToImage"
+    class="image"
+    [style.backgroundImage]="'url(' + article.urlToImage + ')'"></div>
+  <p class="content">{{article.content}}</p>
+</div>
